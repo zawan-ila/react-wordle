@@ -1,0 +1,122 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(240, 247, 247);
+}
+
+.heading{
+    min-height: 40px; 
+    border: 1px solid brown;
+    border-radius: 0.1rem;
+    text-align: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(5, 4rem);
+    grid-template-rows: repeat(6, 4rem);
+    gap: 0.2rem;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+.grid-container > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.8rem;
+    border: 1px solid black;
+    font-size: 2.5rem;
+    font-family: cursive;
+    background-color: aquamarine;
+
+}
+
+@keyframes shake{
+    10%{
+        transform: translateX(-5%);
+    }
+
+    30%{
+        transform: translateX(-10%);
+    }
+
+    50%{
+        transform: translateX(0%);
+    }
+    60%{
+        transform: translateX(5%);
+    }
+    80%{
+        transform: translateX(10%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+
+}
+
+@keyframes updown{
+    10%{
+        transform: translateY(5%);
+    }
+
+    30%{
+        transform: translateY(10%);
+    }
+
+    50%{
+        transform: translateY(0%);
+    }
+    60%{
+        transform: translateY(-5%);
+    }
+    80%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+
+}
+
+@keyframes flip{
+    50%{
+        transform: rotate3d(1, 0, 0, 90deg);
+    }
+
+    100%{
+        transform: rotate3d(1, 0, 0, 0deg);
+    }
+
+}
+
+.flip{
+    animation: flip 0.25s linear;
+}
+
+.shake{
+    animation: shake 0.25s ease-in-out;
+}
+
+.updown{
+    animation: updown 0.25s ease-in-out;
+}
+
+.font-white{
+    color: white;
+}
+
+.gray-bg{
+    background-color: gray !important;
+}
+
+.green-bg{
+    background-color: green !important;
+}
+
+.yellow-bg{
+    background-color: yellow !important;
+}
